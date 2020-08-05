@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto Slab", sans-serif;
+	color: #d9b08c;
+}
+
+body {
+	background-color: #116466;
+	min-width: 100%;
+	overflow-x: clip;
+	scroll-behavior: smooth;
+}
+
+/*Navbar*/
+
+.nav {
+	display: flex;
+	justify-content: space-around;
+	align-items: baseline;
+	position: fixed;
+	min-width: 100vw;
+	bottom: 0;
+	background-color: rgb(28, 191, 180);
+}
+
+.nav-item {
+	list-style: none;
+	height: 2.5rem;
+	width: 5rem;
+	margin-top: 0.6rem;
+	padding-top: 0.2rem;
+	/* flex-grow: 1; */
+}
+
+.nav-link {
+	text-decoration: none;
+	color: white;
+}
+
+@media only screen and (min-width: 768px) {
+	.nav {
+		position: relative;
+		top: 0;
+		justify-content: start;
+		padding-left: 1.5rem;
+	}
+	/* .nav-toggler, .nav-toggler::after, .nav-toggler::before {
+		display: none;
+	} */
+}
+
+/*Hero Section*/
+
+#hero-background {
+	display: block;
+	height: 40vh;
+	z-index: 0;
+	position: relative;
+	bottom: 5rem;
+	animation: slide-in 2s;
+	background-clip: border-box;
+	overflow: hidden;
+}
+
+.blob {
+	animation: blob 10s infinite;
+	z-index: -1;
+	display: block;
+	/* position: relative; */
+
+	height: 2rem;
+	width: 80rem;
+	margin: auto;
+	/* transform: translateY(3rem); */
+}
+
+.hero-section {
+	display: grid;
+	place-items: center;
+	height: 100vh;
+	display: grid;
+	place-content: center;
+}
+
+.hero-heading {
+	position: relative;
+	bottom: 2.50rem;
+	color: #ffcb9a;
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+	.hero-heading {
+		font-size: 2.5rem;
+	}
+}
+
+/* Call to action */
+.call-to-action {
+	/* color: rgb(189, 196, 110); */
+	border-radius: 25px;
+	display: block;
+	text-align: center;
+	background-color: #d9b08c;
+	box-shadow: -3px -3px 7px rgb(164, 238, 233), 2px 2px 7px rgb(2, 77, 72);
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	color: rgb(96, 12, 12);
+	/* transition: box-shadow 0.2s ease-in; */
+	/* align-items: center; */
+	/* border: 1px solid white; */
+}
+
+.call-to-action:active {
+	box-shadow: 2px 2px 7px #a96b35 inset, -2px -2px 7px #ebe0d6 inset;
+}
+
+/* Animations */
+
+@keyframes slide-in {
+	from {
+		transform: translateY(5rem);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
