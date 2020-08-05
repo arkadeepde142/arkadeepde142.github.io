@@ -18,10 +18,11 @@ body {
 
 .nav {
 	display: flex;
+	overflow: hidden;
 	justify-content: space-around;
 	align-items: baseline;
 	position: fixed;
-	min-width: 100vw;
+	width: 100vw;
 	bottom: 0;
 	background-color: rgb(28, 191, 180);
 }
