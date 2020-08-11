@@ -16,13 +16,16 @@ body {
 
 /*Navbar*/
 
+nav{
+	overflow: hidden;
+}
+
 .nav {
 	display: flex;
-	overflow: hidden;
 	justify-content: space-around;
 	align-items: baseline;
 	position: fixed;
-	width: 100vw;
+	min-width: 100vw;
 	bottom: 0;
 	background-color: rgb(28, 191, 180);
 }
@@ -35,6 +38,10 @@ body {
 	padding-top: 0.2rem;
 	/* flex-grow: 1; */
 }
+
+/* .active {
+	
+} */
 
 .nav-link {
 	text-decoration: none;
@@ -55,15 +62,17 @@ body {
 
 /*Hero Section*/
 
-#hero-background {
-	display: block;
+.hero-background {
 	height: 40vh;
-	z-index: 0;
+	width: 100vw;
+	place-content: center;
 	position: relative;
-	bottom: 5rem;
+	bottom: 2rem;
 	animation: slide-in 2s;
-	background-clip: border-box;
-	overflow: hidden;
+	background-image: url("/images/undraw_web_development_w2vv.svg");
+	background-size: 80vh;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .blob {
@@ -92,11 +101,16 @@ body {
 	color: #ffcb9a;
 	font-size: 1.5rem;
 	text-align: center;
+	margin-top: 1rem;
 }
 
 @media only screen and (min-width: 768px) {
 	.hero-heading {
 		font-size: 2.5rem;
+	}
+
+	.hero-background {
+		bottom: 5rem;
 	}
 }
 
@@ -124,11 +138,11 @@ body {
 
 @keyframes slide-in {
 	from {
-		transform: translateY(5rem);
+		transform:  scale(0.5) translateY(6rem);
 		opacity: 0;
 	}
 	to {
-		transform: translateY(0);
+		transform: unset;
 		opacity: 1;
 	}
 }
